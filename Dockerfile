@@ -6,7 +6,8 @@ ENV NODE_VERSION=v16.13.2
 
 SHELL ["/bin/bash", "--login", "-i", "-c"]
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
-RUN source /root/.bashrc && nvm install $NODE_VERSION && nvm use $NODE_VERSION && corepack enable && yarn plugin import version && yarn global add react-native-cli
+RUN source /root/.bashrc && nvm install $NODE_VERSION && nvm use $NODE_VERSION && corepack enable
+RUN yarn plugin import version && yarn global add react-native-cli
 SHELL ["/bin/bash", "--login", "-c"]
 
 COPY . /usr/src/app
