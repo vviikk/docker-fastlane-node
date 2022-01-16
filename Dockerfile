@@ -2,11 +2,12 @@ FROM softartdev/android-fastlane
 # Node.js
 ARG GITHUB_TOKEN
 ENV GITHUB_TOKEN $GITHUB_TOKEN
-ENV NODE_VERSION=14.15.4
+ENV NODE_VERSION=v16.13.2
 
 SHELL ["/bin/bash", "--login", "-i", "-c"]
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
-RUN source /root/.bashrc && nvm install $NODE_VERSION && nvm use $NODE_VERSION && npm i -g yarn react-native-cli
+RUN source /root/.bashrc && nvm install $NODE_VERSION && nvm use $NODE_VERSION && corepack enable
+RUN yarn global add react-native-cli
 SHELL ["/bin/bash", "--login", "-c"]
 
 COPY . /usr/src/app
