@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: piggyslasher/fastlane-nvm-node-yarn-react-native:16.13.2
+          tags: piggyslasher/fastlane-nvm-node-yarn-react-native:16.14.2
