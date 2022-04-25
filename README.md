@@ -7,5 +7,5 @@ Tech included:
 - Android build tools (JDK, NDK)
 - React-native
 - Yarn v2
-- Node 16.13.2
+- Node 16.14.2
 - Fastlane
