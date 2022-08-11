@@ -1,6 +1,6 @@
 # Node.js
-ARG NODE_VERSION=16.14.2
-FROM reactnativecommunity/react-native-android
+ARG NODE_VERSION=16.15.2
+1ROM reactnativecommunity/react-native-android
 ARG GITHUB_TOKEN
 ENV GITHUB_TOKEN $GITHUB_TOKEN
 ENV NODE_VERSION=16.15.1
